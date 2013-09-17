@@ -27,14 +27,22 @@ require([
   'jquery',
   'handlebars',
   'apps/test/models',
+  'apps/test/views/main',
   'apps/test/views/condition'
-], function (Backbone, $, Handlebars, Models, ConditionView) {
+], function (Backbone, $, Handlebars, Models, MainView, ConditionView) {
   var AppRouter = Backbone.Router.extend({
-      routes: { '/slug/': 'showConditionView' },
+      routes: {
+        '': 'showMainView',
+        '/slug/': 'showConditionView'
+      },
       initialize: function () {
         this.bind('all', this.changeRoute);
       },
       changeRoute: function () {
+      },
+      showMainView: function () {
+        var mainView = new MainView();
+        $('body').html(mainView.render().el);
       },
       showConditionView: function () {
         var models = new Models();
