@@ -1,0 +1,12 @@
+{
+  "name": "backbone-test",
+  "version": "0.0.1",
+  "description": "Backbone Test",
+  "dependencies": {
+    "express": "latest",
+    "consolidate": "latest",
+    "handlebars": "latest",
+    "underscore": "latest"
+  },
+  "author": "Kata"
+}

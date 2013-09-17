@@ -1,0 +1,20 @@
+<h1 style="text-align:center">{{name}}</h1>
+<h3>Treatments :</h3>
+<div class="panel-group" id="accordion">
+  {{#each treatments}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#{{@key}}">
+          {{display_name}}
+        </a>
+      </h4>
+    </div>
+    <div id="{{@key}}" class="panel-collapse collapse">
+      <div class="panel-body">
+        {{description}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
